@@ -1,0 +1,32 @@
+/* About.css */
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .about-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .team-title {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .team-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .team-list li {
+    margin-bottom: 5px;
+  }
+  
+  .team-description {
+    margin-top: 20px;
+  }
+  

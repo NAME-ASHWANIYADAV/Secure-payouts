@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './PaymentForm.css'; // Import CSS file for styles
 
 const PaymentForm = () => {
   const [paymentId, setPaymentId] = useState('');
@@ -18,14 +19,14 @@ const PaymentForm = () => {
   };
 
   return (
-    <div>
+    <div className="payment-form-container">
       <h2>Payment Form</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" value={paymentId} onChange={(e) => setPaymentId(e.target.value)} placeholder="Payment ID" />
         <button type="submit">Process Payment</button>
       </form>
-      {message && <p>{message}</p>}
-      {paymentStatus && <p>Payment Status: {paymentStatus}</p>}
+      {message && <p className="message">{message}</p>}
+      {paymentStatus && <p className="payment-status">Payment Status: {paymentStatus}</p>}
     </div>
   );
 };
