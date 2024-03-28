@@ -1,4 +1,40 @@
 /* About.css */
+body{
+  justify-content: center;
+  align-items: center;
+}
+p{
+  color: rgb(100, 102, 103);
+}
+.container-grid{
+  width: 660px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 100px); 
+  grid-column-gap: 150px;
+  grid-row-gap: 100px; 
+  padding: 20px; 
+}
+.members{
+  width: 125px;
+  text-align: center;
+  line-height: 15px;
+  display : inline-block;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.15);
+  padding: 10px 30px;
+}
+.members:last-child{
+  grid-column: 2;
+  justify-content: center;
+}
+.name{
+  font-weight: bold;
+}
+.image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
 .about-container {
     max-width: 800px;
     margin: auto;
@@ -6,7 +42,7 @@
   }
   
   .about-title {
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -19,7 +55,7 @@
   
   .team-list {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 10px;
   }
   
   .team-list li {
