@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import PaymentForm from './PaymentForm';
+import Header from './header.js';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
+        <Header/>
         <Routes>
         <Route exact path="/" element={<Home />} /> {/* Use element prop instead of component prop */}
           <Route path="/about" element={<About />} /> {/* Use element prop instead of component prop */}
