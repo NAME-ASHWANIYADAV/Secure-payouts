@@ -1,12 +1,52 @@
 /* About.css */
+body{
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 248, 251);
+}
+p{
+  color: rgb(100, 102, 103);
+}
+.container-grid{
+  width: 660px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 100px); 
+  grid-column-gap: 150px;
+  grid-row-gap: 100px; 
+  padding: 20px; 
+}
+.members{
+  background-color: white;
+  color: black;
+  width: 125px;
+  text-align: center;
+  line-height: 15px;
+  display : inline-block;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.15);
+  padding: 10px 30px;
+}
+.members:last-child{
+  grid-column: 2;
+  justify-content: center;
+}
+.name{
+  font-weight: bold;
+}
+.image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
 .about-container {
+  background-color: rgb(253, 253, 253);
     max-width: 800px;
     margin: auto;
     padding: 20px;
   }
   
   .about-title {
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -19,7 +59,7 @@
   
   .team-list {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 10px;
   }
   
   .team-list li {
@@ -29,4 +69,12 @@
   .team-description {
     margin-top: 20px;
   }
-  
+
+.contact-us{
+  font-size: 30px;
+}
+.phone , .email{
+  margin: 0px;
+  color: rgb(12, 139, 178);
+  text-decoration: underline;
+}

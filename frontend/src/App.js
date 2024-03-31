@@ -6,11 +6,12 @@ import StripePaymentForm from './StripePaymentForm'; // Update import for paymen
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
-
+import Header from './header.js';
 const App = () => {
   return (
     <Router>
       <div className="App">
+        <Header/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
