@@ -2,16 +2,19 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
-import PaymentForm from './PaymentForm';
+import StripePaymentForm from './StripePaymentForm'; // Update import for payment form
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+
 
 const App = () => {
   return (
     <Router>
       <div className="App">
         <Routes>
-        <Route exact path="/" element={<Home />} /> {/* Use element prop instead of component prop */}
-          <Route path="/about" element={<About />} /> {/* Use element prop instead of component prop */}
-          <Route path="/donate" element={<PaymentForm />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/donate" element={<StripePaymentForm />} /> {/* Update route to use StripePaymentForm */}
         </Routes>
       </div>
     </Router>
@@ -19,4 +22,3 @@ const App = () => {
 };
 
 export default App;
-

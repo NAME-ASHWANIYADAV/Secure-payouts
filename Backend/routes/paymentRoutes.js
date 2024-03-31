@@ -1,45 +1,31 @@
 const express = require('express');
 const router = express.Router();
-const Payment = require('../models/Payment');
+const stripe = require('stripe')('sk_test_51OxwfiSHo9QORuto1Uo0bN4gZT0o3c0qgvEEFlJey5SWcPFRLDa2OAiheAQyylvSxqKsPw7FtO6htJ1A3ltlLINo00S6IF4yHL'); // Import Stripe library and initialize with your secret key
 
-// POST /api/payments - Create a new payment
-router.post('/', async (req, res) => {
+// POST /api/payments/process-payment - Process a payment
+router.post('/process-payment', async (req, res) => {
+  const { paymentId, amount } = req.body; // Extract paymentId and amount from request body
+
   try {
-    const { paymentId } = req.body;
+    // Create a PaymentIntent using Stripe API
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: amount * 100, // Convert amount to cents (Stripe expects amount in cents)
+      currency: 'usd', // Change to your desired currency
+      payment_method: paymentId,
+      confirm: true,
+    });
 
-    // Check if paymentId already exists
-    const existingPayment = await Payment.findOne({ paymentId });
-    if (existingPayment) {
-      return res.status(400).json({ message: 'Payment with this ID already exists.' });
+    // Check paymentIntent status and update database accordingly
+    if (paymentIntent.status === 'succeeded') {
+      // Payment succeeded, update payment status in database or perform other actions
+      res.status(200).json({ message: 'Payment processed successfully.', paymentIntent });
+    } else {
+      // Payment failed, handle accordingly
+      res.status(400).json({ error: 'Payment processing failed.' });
     }
-
-    // Create a new payment
-    const newPayment = new Payment({ paymentId });
-    await newPayment.save();
-
-    res.status(201).json({ message: 'Payment created successfully.', payment: newPayment });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal server error.' });
-  }
-});
-
-// PUT /api/payments/:id/status - Update payment status
-router.put('/:id/status', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { paymentStatus } = req.body;
-
-    // Update payment status
-    const updatedPayment = await Payment.findByIdAndUpdate(id, { paymentStatus }, { new: true });
-    if (!updatedPayment) {
-      return res.status(404).json({ message: 'Payment not found.' });
-    }
-
-    res.json({ message: 'Payment status updated successfully.', payment: updatedPayment });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal server error.' });
+    console.error('Error processing payment:', error);
+    res.status(500).json({ error: 'Internal server error.' });
   }
 });
 

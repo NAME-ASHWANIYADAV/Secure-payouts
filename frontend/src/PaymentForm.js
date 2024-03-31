@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './PaymentForm.css'; // Import CSS file for styles
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
 const PaymentForm = () => {
   const [paymentId, setPaymentId] = useState('');
