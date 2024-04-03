@@ -1,4 +1,5 @@
 import React from 'react'
+import './StartupxInfo.css';
 
 const StartupxInfo = () => {
   return (

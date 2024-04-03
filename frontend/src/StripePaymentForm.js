@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import axios from 'axios'; // Import Axios for making API requests
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
+import axios from 'axios';
 
 const StripePaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);
+  const [paymentAmount, setPaymentAmount] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,10 +31,11 @@ const StripePaymentForm = () => {
       } else {
         setPaymentError(null);
         setPaymentSuccess(paymentMethod.id);
-        // Send paymentMethod.id to your backend for processing
+
+        // Send paymentMethod.id and paymentAmount to your backend for processing
         const response = await axios.post('http://localhost:5000/api/payments/process-payment', {
           paymentId: paymentMethod.id,
-          amount: 100, // Example amount (in cents) - update this based on your requirements
+          amount: paymentAmount,
         });
         console.log(response.data); // Log the response from your backend
       }
@@ -48,6 +48,12 @@ const StripePaymentForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={paymentAmount}
+        onChange={(e) => setPaymentAmount(e.target.value)}
+        placeholder="Enter payment amount"
+      />
       <CardElement />
       <button type="submit">Pay</button>
       {paymentError && <p style={{ color: 'red' }}>{paymentError}</p>}
@@ -57,4 +63,5 @@ const StripePaymentForm = () => {
 };
 
 export default StripePaymentForm;
+
 

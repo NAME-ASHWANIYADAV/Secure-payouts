@@ -1,0 +1,58 @@
+
+/* MemberInfo.css */
+
+.team-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray color for the title */
+  }
+  
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .members {
+    background-color: #f0f0f0; /* Light gray background color */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .members:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+  }
+  
+  .image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.1);
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff; /* Blue color for the member names */
+  }
+  
+  .members p {
+    margin: 5px 0;
+    color: #666; /* Medium gray color for text */
+  }
+  
+  .members a {
+    color: #28a745; /* Green color for links */
+  }
+  

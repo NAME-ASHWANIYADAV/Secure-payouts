@@ -1,0 +1,56 @@
+/* StartupxInfo.css */
+
+.about-text {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .about-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* Dark gray color for the title */
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    border: 1px solid #ccc; /* Light gray border for the hr element */
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #555; /* Dark gray color for paragraphs */
+    margin-bottom: 15px;
+  }
+  
+  p:last-child {
+    margin-bottom: 0; /* Remove margin bottom for the last paragraph */
+  }
+  
+  /* Interactive styles */
+  p:hover {
+    color: #007bff; /* Blue color on hover for paragraphs */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  p:hover::before {
+    content: '🌟'; /* Add a star emoji before the paragraph on hover */
+    margin-right: 5px;
+  }
+  
+  p:hover::after {
+    content: '🌟'; /* Add a star emoji after the paragraph on hover */
+    margin-left: 5px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+  

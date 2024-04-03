@@ -1,0 +1,41 @@
+/* ContactUs.css */
+
+/* ContactUs.css */
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details {
+    margin-top: 20px;
+  }
+  
+  .contact-details p {
+    margin: 5px 0;
+  }
+  
+  .contact-details .phone {
+    color: #007bff;
+  }
+  
+  .contact-details .email {
+    color: #28a745;
+  }
+  

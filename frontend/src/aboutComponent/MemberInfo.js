@@ -1,5 +1,6 @@
 import React from 'react';
 import photo_payout from './photo_payout.jpeg';
+import './MemberInfo.css';
 const members = [
   {
     Image : photo_payout,
@@ -75,18 +76,18 @@ const members = [
 const MemberInfo = () => {
   return (
     <>
-    <h3 className="team-title">Our Team</h3>
-    <div className='container-grid'>
-      {members.map((member, index) => (
-        <div key={index} className="members">
-          <img src={member.Image} alt={member.Name} className="image" />
-          <p className="name">{member.Name}</p>
-          <p>{member.Position}</p>
-          <a href="https://www.linkedin.com/company/skillop-dtu/" target="_blank" rel="noopener noreferrer">{member.Org}</a>
-          <p>{member.Clg}</p>
-        </div>
-      ))}
-    </div>
+      <h3 className="team-title">Our Team</h3>
+      <div className='container-grid'>
+        {members.map((member, index) => (
+          <div key={index} className="members">
+            <img src={member.Image} alt={member.Name} className="image" />
+            <p className="name">{member.Name}</p>
+            <p>{member.Position}</p>
+            <a href="https://www.linkedin.com/company/skillop-dtu/" target="_blank" rel="noopener noreferrer">{member.Org}</a>
+            <p>{member.Clg}</p>
+          </div>
+        ))}
+      </div>
     </>
   )
 }
