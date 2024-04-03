@@ -1,54 +1,58 @@
 /* PaymentForm.css */
+
 .payment-form-container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input[type="text"] {
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .message {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .payment-status {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+  max-width: 600px;
+  margin: 50px auto; /* Added margin for better centering */
+  padding: 30px;
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="number"] {
+  margin-bottom: 20px; /* Increased margin */
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 12px 24px; /* Increased padding */
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.payment-status {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,43 +1,64 @@
 /* Home.css */
+
 .home-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .btn-donate,
-  .btn-about {
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-donate:hover,
-  .btn-about:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold; /* Add bold font weight */
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add margin at the top for spacing */
+}
+
+.btn-donate,
+.btn-about {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: #007bff; /* Blue color for both buttons */
+}
+
+.btn-about {
+  background-color: #28a745; /* Green color for About button */
+}
+
+.btn-donate:hover,
+.btn-about:hover {
+  background-color: #0056b3; /* Darker blue on hover for both buttons */
+}
+
+.btn-donate:active,
+.btn-about:active {
+  transform: translateY(2px);
+}
+
+.btn-donate:focus,
+.btn-about:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff; /* Blue border on focus for both buttons */
+}

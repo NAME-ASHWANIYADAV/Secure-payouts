@@ -1,0 +1,37 @@
+/* Cancel.css */
+
+.cancel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .cancel-content {
+    text-align: center;
+  }
+  
+  .cancel-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; /* Dark gray color for text */
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .cancel-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff; /* Blue color for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

@@ -1,7 +1,5 @@
 /* ContactUs.css */
 
-/* ContactUs.css */
-
 .contact-container {
     max-width: 600px;
     margin: 0 auto;
@@ -9,18 +7,26 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .contact-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .contact-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #ff6f61; /* Red color */
   }
   
   .contact-text {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
+    color: #007bff; /* Blue color */
   }
   
   .contact-details {
@@ -32,10 +38,10 @@
   }
   
   .contact-details .phone {
-    color: #007bff;
+    color: #28a745; /* Green color */
   }
   
   .contact-details .email {
-    color: #28a745;
+    color: #ff5722; /* Orange color */
   }
   

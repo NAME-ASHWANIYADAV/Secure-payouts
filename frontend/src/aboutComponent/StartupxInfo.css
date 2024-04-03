@@ -17,8 +17,14 @@
     margin-bottom: 20px;
   }
   
-  p {
-    color: #555; /* Dark gray color for paragraphs */
+  /* Individual paragraph styles */
+  p:nth-child(odd) {
+    color: #007bff; /* Blue color for odd paragraphs */
+    margin-bottom: 15px;
+  }
+  
+  p:nth-child(even) {
+    color: #28a745; /* Green color for even paragraphs */
     margin-bottom: 15px;
   }
   
@@ -28,9 +34,8 @@
   
   /* Interactive styles */
   p:hover {
-    color: #007bff; /* Blue color on hover for paragraphs */
-    cursor: pointer;
-    transition: color 0.3s ease;
+    transform: scale(1.1); /* Scale effect on hover */
+    transition: transform 0.3s ease;
   }
   
   p:hover::before {
