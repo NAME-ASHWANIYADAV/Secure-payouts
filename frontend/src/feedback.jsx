@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'; // Make sure to import your CSS file
+import './feedback.css'; // Make sure to import your CSS file
 
 function FeedbackForm() {
   return (
