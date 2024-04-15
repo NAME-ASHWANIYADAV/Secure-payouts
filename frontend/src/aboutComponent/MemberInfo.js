@@ -1,72 +1,81 @@
 import React from 'react';
-import photo_payout from './photo_payout.jpeg';
+import ekansh from './images/ekansh.jpeg';
+import maanit from './images/maanit.jpeg';
+import faeez from './images/faeez.jpeg';
+import harsh from './images/harsh.jpeg';
+import anurag from './images/anurag.jpeg';
+import jasmeen from './images/jasmeen.jpeg';
+import kirti from './images/kirti.jpeg';
+import krishmann from './images/krishmann.jpeg';
+import pratham from './images/pratham.jpeg';
+import ritik from './images/ritik.jpeg';
 import './MemberInfo.css';
 const members = [
   {
-    Image : photo_payout,
+    Image : ekansh,
     Name : "Ekansh Bhushan",
     Position : "Tech president",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : maanit,
     Name : "Mannit Arora",
     Position : "Tech Vice-president",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : krishmann,
     Name : "Krissmann Gupta",
     Position : "Founder",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : jasmeen,
     Name : "Jasmeen Kour",
     Position : "Non-Tech president",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : ritik,
     Name : "Ritik Pal",
     Position : "Member",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : faeez,
     Name : "Faeez",
     Position : "Member",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : anurag,
     Name : "Anurag Kumar",
     Position : "Member",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : harsh,
     Name : "Harsh Vardhan",
     Position : "Member",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : pratham,
     Name : "Pratham Mehra",
     Position : "Member",
     Org : "@startupX dtu",
     Clg : "DCE-DTU '26"
   },
   {
-    Image : photo_payout,
+    Image : kirti,
     Name : "kirti",
     Position : "Member",
     Org : "@startupX dtu",

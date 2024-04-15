@@ -1,7 +1,7 @@
 import React from 'react';
 import './feedback.css'; // Make sure to import your CSS file
 
-function FeedbackForm() {
+const FeedbackForm = () => {
   return (
     <div>
       <h1>StartupX ReliefFund</h1>
@@ -52,6 +52,6 @@ function FeedbackForm() {
       </div>
     </div>
   );
-}
+};
 
 export default FeedbackForm;

@@ -7,7 +7,8 @@ import PaymentForm from './PaymentForm';
     import Header from './header';
     import sucess from './sucess';
     import cancel from './cancel';
-
+import FeedbackForm from './feedback';
+import Footer from './footer';
 
 const App = () => {
   return (
@@ -18,9 +19,11 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/donate" element={<PaymentForm />} />
+          <Route path="/feedback" element={<FeedbackForm />}/>
         <Route path="/sucess" element={<sucess/>}/>
         <Route path="/cancel" element={<cancel/>}/>
          </Routes>
+         <Footer/>
       </div>
     </Router>
   );

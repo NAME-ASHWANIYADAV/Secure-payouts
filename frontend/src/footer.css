@@ -1,4 +1,6 @@
-
+.container{
+	width:860px;
+}
 .company-details{
 	overflow: hidden;
 	padding: 3em 0em;
